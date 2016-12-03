@@ -1,0 +1,15 @@
+/media/sc/B6BC354ABC350681/CRUZ E SOUSA/Cruz e Souza/Temp/bin/Debug/UnityEngine.dll
+/media/sc/B6BC354ABC350681/CRUZ E SOUSA/Cruz e Souza/Temp/bin/Debug/UnityEditor.dll
+/media/sc/B6BC354ABC350681/CRUZ E SOUSA/Cruz e Souza/Temp/bin/Debug/UnityEngine.UI.dll
+/media/sc/B6BC354ABC350681/CRUZ E SOUSA/Cruz e Souza/Temp/bin/Debug/UnityEngine.Networking.dll
+/media/sc/B6BC354ABC350681/CRUZ E SOUSA/Cruz e Souza/Temp/bin/Debug/GETween.dll
+/media/sc/B6BC354ABC350681/CRUZ E SOUSA/Cruz e Souza/Temp/bin/Debug/GUIAnimatorFREE.dll
+/media/sc/B6BC354ABC350681/CRUZ E SOUSA/Cruz e Souza/Temp/bin/Debug/Unity.DataContract.dll
+/media/sc/B6BC354ABC350681/CRUZ E SOUSA/Cruz e Souza/Temp/bin/Debug/Mono.Cecil.dll
+/media/sc/B6BC354ABC350681/CRUZ E SOUSA/Cruz e Souza/Temp/bin/Debug/Unity.SerializationLogic.dll
+/media/sc/B6BC354ABC350681/CRUZ E SOUSA/Cruz e Souza/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/media/sc/B6BC354ABC350681/CRUZ E SOUSA/Cruz e Souza/Temp/bin/Debug/Unity.UNetWeaver.dll
+/media/sc/B6BC354ABC350681/CRUZ E SOUSA/Cruz e Souza/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/media/sc/B6BC354ABC350681/CRUZ E SOUSA/Cruz e Souza/Temp/bin/Debug/Unity.CecilTools.dll
+/media/sc/B6BC354ABC350681/CRUZ E SOUSA/Cruz e Souza/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/media/sc/B6BC354ABC350681/CRUZ E SOUSA/Cruz e Souza/Temp/bin/Debug/Mono.Cecil.Mdb.dll
