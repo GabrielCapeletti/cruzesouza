@@ -444,6 +444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOffSet: 5
   speed: 15
+  poemMode: 0
   enemies:
   - {fileID: 1000011516532766, guid: aada1fb415bc8a34e90d16e497df1f73, type: 2}
   - {fileID: 1000011637136150, guid: 014ad9f469a7ca54586121516607accd, type: 2}
@@ -549,8 +550,6 @@ MonoBehaviour:
   sp12_2: {fileID: 21300000, guid: e0abd90b541f843b5a801c8749b0ef10, type: 3}
   sp12_3: {fileID: 21300000, guid: 0b22193dc658e42cba1f023362ef19c2, type: 3}
   tempoTotal: 48
-  tempoAtual: 0
-  active: 0
 --- !u!114 &114000013913471640
 MonoBehaviour:
   m_ObjectHideFlags: 1

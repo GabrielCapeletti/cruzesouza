@@ -7,10 +7,8 @@ public class History_Controler : MonoBehaviour {
 	public UnityEngine.UI.Text txtRef;
 	public AudioClip audio_beep;
     public AudioClip history1;
-    public AudioClip history2;
-    public AudioClip history3;
-
-    public int historia;
+ 
+	public int historia;
     public AudioSource narrador;
     public UnityEngine.UI.Image textbox;
     public UnityEngine.UI.Image intro;
@@ -59,7 +57,7 @@ public class History_Controler : MonoBehaviour {
 		//Texto 19;
 		"Tempos difíceis viriam nos anos seguintes na vida do poeta, mas antes de passarmos para a última parte dessa história, guie Cruz e Souza pela cidade do Rio de Janeiro." ,
 		//Texto 20;
-		"coletando exemplares das revistas  A Cidade do Rio de Janeiro e Revista Ilustrada,  do jornal Novidades, e das publicações Missal e Broquéis. Novamente Cuidado com os obstáculos pelo caminho.",
+		"coletando exemplares das revistas  A Cidade do Rio de Janeiro e Revista Ilustrada,  do jornal Novidades, e das publicações Missal e Broquéis. Cuidado com os obstáculos pelo caminho.",
 		//Texto 21 muda tela 8 - JOGO: RIO DE JANEIRO;
 		"Para garantir o sustento Cruz e Souza, trabalha como arquivista na Estrada de Ferro Central do Brasil. Tempos difíceis de pobreza e doenças se aproximavam.\n",
 		//Texto 22;
@@ -79,13 +77,17 @@ public class History_Controler : MonoBehaviour {
 		//Texto 29;
 		"Três dias depois, em 19 de março de 1898, a história de Cruz e Souza recebe o ponto final. Seu corpo é levado para o Rio de Janeiro em um vagão de carga transportando gado e ao chegar, foi sepultado no Cemitério de São Francisco Xavier por seus amigos.\n",
 		//Texto 30;
-		"Em 29 de novembro de 2007, os restos mortais de Cruz e Souza foram transladados do Cemitério São Francisco Xavier, no Rio de Janeiro, para Florianópolis, sendo então acolhidos no Museu Histórico de Santa Catarina - Palácio Cruz e Sousa, no centro da capital catarinense\n",
+		"Os 36 anos vividos por Cruz e Souza não foram suficientes para que ele pudesse ver todos seus valiosos escritos publicados, mas graças as publicações póstumas a literatura nacional hoje é enriquecida com as Poesias e os Poemas em prosa de um dos precursores do simbolismo no Brasil.\n",
 		//Texto 31;
-		"Formalizando sua importância para a literatura brasileira e regional, Cruz e Sousa é um dos patronos da Academia Catarinense de Letras, representando a cadeira número 15.\n",
+		"Relembrando as grandes contribuições do Cisne Negro, nessa última fase do jogo guie o trem de carga com o corpo de Cruz e Souza de Volta ao Rio de Janeiro e tente coletar pelo caminho exemplares das obras publicadas após sua morte: Últimos Sonetos, Evocações, Faróis, Outras evocações, O livro Derradeiro e Dispersos.\n",
 		//Texto 32 - muda tela 11 - JOGO: TREM;
-		"Os 36 anos vividos por Cruz e Souza não foram suficientes para que ele pudesse ver todos seus valiosos escritos publicados\n",
+		"O terceiro filho faleceria logo após a morte do poeta, mas Cruz e Souza ainda deixara Gavita grávida de seu quarto filho, João da Cruz e Souza Jr\n",
 		//Texto 33;
-		"mas graças as publicações póstumas a literatura nacional hoje é enriquecida com as Poesias e os Poemas em prosa de um dos precursores do simbolismo no Brasil: Cruz e Souza, o Dante Negro, o Poeta do Desterro!\n",
+		"Em 1901 morre Gavita e em 1915 o quarto filho do poeta. Antes, porém, João engravida Francelina, nascendo assim Sílvio Cruz e Souza, neto do Poeta do Desterro.\n",
+		//Texto 34;
+		"Em 29 de novembro de 2007, os restos mortais de Cruz e Souza foram transladados do Cemitério São Francisco Xavier, no Rio de Janeiro, para Florianópolis, sendo então acolhidos no Museu Histórico de Santa Catarina - Palácio Cruz e Sousa, no centro da capital catarinense\n",
+		//Texto 35;
+		"Formalizando sua importância para a literatura brasileira e regional, Cruz e Sousa é um dos patronos da Academia Catarinense de Letras, representando a cadeira número 15.\n",
 
 	};
 
@@ -103,29 +105,31 @@ public class History_Controler : MonoBehaviour {
 		/* texto 9 */10,
 		/* texto 10 */17,
 		/* texto 11 */10,
-		/* texto 12 */8,
-		/* texto 13 */8,
-		/* texto 14 */17,
-		/* texto 15 */14,
-		/* texto 16 */22,
-		/* texto 17 */22,
-		/* texto 18 */6,
-		/* texto 19 */10,
-		/* texto 20 */5,
-		/* texto 21 */11,
-		/* texto 22 */9,
-		/* texto 23 */10,
-		/* texto 24 */11,
+		/* texto 12 */15,
+		/* texto 13 */15,
+		/* texto 14 */15,
+		/* texto 15 */15,
+		/* texto 16 */15,
+		/* texto 17 */15,
+		/* texto 18 */15,
+		/* texto 19 */15,
+		/* texto 20 */15,
+		/* texto 21 */15,
+		/* texto 22 */15,
+		/* texto 23 */15,
+		/* texto 24 */15,
 		/* texto 25 */15,
-		/* texto 26 */13,
-		/* texto 27 */10,
-		/* texto 28 */17,
-		/* texto 29 */20,
-		/* texto 30 */18,
-		/* texto 31 */11,
-		/* texto 32 */10,
-		/* texto 32 */16,
+		/* texto 26 */15,
+		/* texto 27 */15,
+		/* texto 28 */15,
+		/* texto 29 */15,
+		/* texto 30 */15,
+		/* texto 31 */15,
+		/* texto 32 */15,
+		/* texto 32 */15,
 		/* texto 33 */15,
+		/* texto 34 */15,
+		/* texto 35 */15
 	};
 	//TEMPO TOTAL QUE DEMORA PARA ESCREVER O TEXTO
 	private int[] textos_segundos_escrita = {		
@@ -141,29 +145,31 @@ public class History_Controler : MonoBehaviour {
 		/* texto 9 */5,
 		/* texto 10 */12,
 		/* texto 11 */5,
-		/* texto 12 */3,
-		/* texto 13 */3,
-		/* texto 14 */11,
-		/* texto 15 */9,
-		/* texto 16 */17,
-		/* texto 17 */17,
-		/* texto 18 */2,
-		/* texto 19 */5,
-		/* texto 20 */3,
-		/* texto 21 */5,
-		/* texto 22 */3,
-		/* texto 23 */5,
-		/* texto 24 */7,
+		/* texto 12 */10,
+		/* texto 13 */10,
+		/* texto 14 */10,
+		/* texto 15 */10,
+		/* texto 16 */10,
+		/* texto 17 */10,
+		/* texto 18 */10,
+		/* texto 19 */10,
+		/* texto 20 */10,
+		/* texto 21 */10,
+		/* texto 22 */10,
+		/* texto 23 */10,
+		/* texto 24 */10,
 		/* texto 25 */10,
-		/* texto 26 */8,
-		/* texto 27 */5,
-		/* texto 28 */12,
-		/* texto 29 */15,
-		/* texto 30 */13,
-		/* texto 31 */6,
-		/* texto 32 */5,
+		/* texto 26 */10,
+		/* texto 27 */10,
+		/* texto 28 */10,
+		/* texto 29 */10,
+		/* texto 30 */10,
+		/* texto 31 */10,
+		/* texto 32 */10,
 		/* texto 32 */10,
 		/* texto 33 */10,
+		/* texto 34 */10,
+		/* texto 35 */10
 	};
 	
 	int textoAtual = 0;
@@ -179,9 +185,7 @@ public class History_Controler : MonoBehaviour {
 
         colorBegin = intro.color;
         colorEnd = new Color(colorBegin.r, colorBegin.g, colorBegin.b, 0f);
-
-
-       
+    
         if (historia == 0)
         {
            //narrador.PlayOneShot(history1);
@@ -228,18 +232,18 @@ public class History_Controler : MonoBehaviour {
       
         else
         {
-            
+            if (primeiro)
+            {
+                narrador.PlayOneShot(history1);
+                primeiro = false;
+            }
             mudaTexto(textoAtual, contempo);
             contempo += Time.deltaTime;
             switch (textoAtual)
             {
                 case 0: //BAIXANDO O ALPHA
                         //intro
-                    if (primeiro)
-                    {
-                        narrador.PlayOneShot(history1);
-                        primeiro = false;
-                    }
+
                     Delay += Time.deltaTime;
                     intro.color = Color.Lerp(colorBegin, colorEnd, Delay * 0.1f);
 
@@ -255,8 +259,7 @@ public class History_Controler : MonoBehaviour {
                     }
                     break;
                 case 2:
-                
-                    if (todas.transform.position.y > targetFala2Y)
+                    if(todas.transform.position.y > targetFala2Y)
                         todas.transform.Translate(new Vector3(0,-1,0));
                     break;
                 case 3:
@@ -266,128 +269,22 @@ public class History_Controler : MonoBehaviour {
                 case 4:
                     if (todas.transform.position.y< targetFala4Y)
                         todas.transform.Translate(new Vector3(0, +1.5f, 0));
-                 //   Debug.Log(todas.transform.position.y);
+                    Debug.Log(todas.transform.position.y);
                     break;
                 case 5:
                     if (todas.transform.position.y > targetFala5Y)
                         todas.transform.Translate(new Vector3(0, -1.5f, 0));
-                 //   Debug.Log(todas.transform.position.y);
+                    Debug.Log(todas.transform.position.y);
                     break;
                 case 6:
                     if (todas.transform.position.x > targetFala6X)
                         todas.transform.Translate(new Vector3(-1.2f, 0, 0));
-                   // Debug.Log(todas.transform.position.x);
-                    break;
-                case 12:
-                    if (primeiro)
-                    {
-                        narrador.PlayOneShot(history2);
-                        primeiro = false;
-                        Vector3 v = new Vector3(todas.transform.position.x - 900, todas.transform.position.y, todas.transform.position.z);
-                        todas.transform.position = v;
-
-
-                    }
-
-                    Delay += Time.deltaTime;
-                    intro.color = Color.Lerp(colorBegin, colorEnd, Delay * 0.1f);
-
-                    if (intro.color.a == 0)
-                    {
-                        GameObject.Destroy(intro);
-                    }
-
-                    break;
-                case 13:
-                    if (!intro.IsDestroyed())
-                    {
-                        GameObject.Destroy(intro);
-                    }
-                    break;
-                case 14:
-                    if(todas.transform.position.y<300)
-                         todas.transform.Translate(new Vector3(0, 1f, 0));
-                    Debug.Log(todas.transform.position.y);
-                    break;
-                   
-                case 17:
-                    if (todas.transform.position.y < 460)
-                        todas.transform.Translate(new Vector3(0, 0.5f, 0));
-                    Debug.Log(todas.transform.position.y);
-                    break;
-                case 20:
-                    //intro
-                    if (primeiro)
-                    {
-                        narrador.PlayOneShot(history3);
-                        primeiro = false;
-                        Vector3 v = new Vector3(todas.transform.position.x-980, todas.transform.position.y+910, todas.transform.position.z);
-                        todas.transform.position = v;
-                    }
-                    Delay += Time.deltaTime;
-                    intro.color = Color.Lerp(colorBegin, colorEnd, Delay * 0.1f);
-
-                    if (intro.color.a == 0)
-                    {
-                        GameObject.Destroy(intro);
-                    }
-                   
-                    break;
-                case 21:
-                    if (!intro.IsDestroyed())
-                    {
-                        GameObject.Destroy(intro);
-                    }
-                   // if(todas.transform.position.x > -125)
-                         todas.transform.Translate(new Vector3(0.3f, 0, 0));
                     Debug.Log(todas.transform.position.x);
                     break;
-                case 22:
-                    //if (todas.transform.position.x > -125)
-                        todas.transform.Translate(new Vector3(0.3f, 0, 0));
-                    Debug.Log(todas.transform.position.x);
+                case 9:
+               
                     break;
-                case 23:
-                    if (todas.transform.position.x < 845)
-                        todas.transform.Translate(new Vector3(0.3f, 0, 0));
-                    Debug.Log(todas.transform.position.x);
-                    break;
-                case 24:
-                    if (todas.transform.position.x < 845)
-                        todas.transform.Translate(new Vector3(0.3f, 0, 0));
-                    Debug.Log(todas.transform.position.x);
-                    break;
-                case 25:
-                    if (todas.transform.position.x < 845)
-                        todas.transform.Translate(new Vector3(0.3f, 0, 0));
-                    Debug.Log(todas.transform.position.x);
-                    break;
-                case 26:
-                    if (todas.transform.position.y > 850)
-                        todas.transform.Translate(new Vector3(0, -.3f, 0));
-                    Debug.Log(todas.transform.position.y);
-                    break;
-                case 27:
-                    if (todas.transform.position.y < 920)
-                        todas.transform.Translate(new Vector3(0, .3f, 0));
-                    Debug.Log(todas.transform.position.y);
-                    break;
-                case 28:
-                    if(todas.transform.position.x > -70)
-                        todas.transform.Translate(new Vector3(-.4f, 0, 0));
-                    Debug.Log(todas.transform.position.x);
-                    break;
-                case 29:
-                    if (todas.transform.position.x > -70)
-                        todas.transform.Translate(new Vector3(-.4f, 0, 0));
-                    Debug.Log(todas.transform.position.x);
-                    break;
-                case 30:
-                    if (todas.transform.position.x > -70)
-                        todas.transform.Translate(new Vector3(-.4f, 0, 0));
-                    Debug.Log(todas.transform.position.x);
-                    break;
-                  
+        
                 default:
                     break;
 
@@ -431,11 +328,13 @@ public class History_Controler : MonoBehaviour {
 
         if (satual > stotal) {
 			if (textoAtual == 11)
-				Application.LoadLevel (2);
+				Application.LoadLevel (1);
 			if (textoAtual == 19)
 				Application.LoadLevel (0);
-			if (textoAtual == 32)
-				Application.LoadLevel (1);
+			if (textoAtual == 30)
+				Application.LoadLevel (0);
+			if (textoAtual == 35)
+				Application.LoadLevel (0);
 			
 			textoAtual++;
 			txtRef.text = "";

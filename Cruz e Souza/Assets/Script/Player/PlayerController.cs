@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using Core;
 using System;
@@ -25,9 +26,6 @@ public class PlayerController : MonoBehaviour {
 	public GameObject vida;
 	public Sprite[] sp;
     public Sprite[] setas;
-    public GameObject fundo_posGame;
-    public GameObject UI_PosGame;
-    public GameObject timer;
     public GameObject seta;
 	private int life;
 
@@ -36,6 +34,7 @@ public class PlayerController : MonoBehaviour {
     private Renderer modelRender;
     public Animator animator;
 
+    public AudioSource plimSound;
 
     private Vector3 initialPosition;
     private int score;
@@ -47,8 +46,6 @@ public class PlayerController : MonoBehaviour {
     private Action stateMethod;
     private float time_trocasetas = 2;
     private float time_instructions;
-
-    TempoControler timerScript;
     void Start () {
 		life = 3;
         modelRender = model.GetComponent<Renderer>();
@@ -58,9 +55,6 @@ public class PlayerController : MonoBehaviour {
         currentState = State.RUNNING;
         rigidBody = this.GetComponent<Rigidbody>();
         time_instructions = time_trocasetas * 4+1;
-        timerScript = timer.GetComponent<TempoControler>();
-
-        UI_PosGame.SetActive(false);
     }
 
     
@@ -68,7 +62,7 @@ public class PlayerController : MonoBehaviour {
     private float time_setas = 0;
     int qualSeta = -1;
     bool first = true;
-    bool first2 = true;
+  
     void Update () {
 		if(life >= 0){
 			vida.GetComponent<Image>().sprite =sp [life];
@@ -136,7 +130,7 @@ public class PlayerController : MonoBehaviour {
         //            {
         //                first = true;
         //                GameObject.Destroy(seta);
-
+                    
         //            }
         //            break;
         //        default:
@@ -144,38 +138,11 @@ public class PlayerController : MonoBehaviour {
         //    }
         //}else
         //{
-        //  stateMethod();
-        //}
-
-        if (first2)//comça a rodar o contador de tempo da fase, após o fim do tutorial
-        {
-
-            timerScript.active = true;
-            first2 = false;
-        }
-        if (timerScript.tempoAtual < timerScript.tempoTotal && life > 0) // JOGO 
-        {
             stateMethod();
-        }
-        else
-        {
+        //}
+                  
+	}
 
-            if (fundo_posGame.transform.position.x > 400)//200 é o targetX dele..
-            {
-                fundo_posGame.transform.Translate(new Vector3(-3, 0, 0));
-            }
-            else
-            {
-
-                UI_PosGame.active = true;
-            }
-
-
-        }
-
-    }
-
-    
     void OnJump()
     {
         
@@ -288,6 +255,10 @@ public class PlayerController : MonoBehaviour {
         if (coll.collider.tag == TagMap.ENEMY)
         {
 			life--;
+            if (life < 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
             StartCoroutine(DamageAnimation());
             KillObstacle(coll.gameObject);
         }
@@ -299,6 +270,14 @@ public class PlayerController : MonoBehaviour {
             index--;
             Singleton<GameManager>.Instance.GotItem(index);
             KillObstacle(coll.gameObject);
+            plimSound.Play();
+        }
+
+        if (coll.collider.tag == TagMap.ITEM_MAGICO)
+        {
+            plimSound.Play();
+            Singleton<GameManager>.Instance.ShowBlackScreen();
+            GameObject.Destroy(coll.gameObject);
         }
         
         if (coll.collider.tag == TagMap.GROUND && this.currentState == State.JUMPING )

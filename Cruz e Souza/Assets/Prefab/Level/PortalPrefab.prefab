@@ -40,6 +40,7 @@ GameObject:
   - 65: {fileID: 65000011423647174}
   - 54: {fileID: 54000012938344482}
   - 114: {fileID: 114000011100429188}
+  - 114: {fileID: 114000013833587386}
   - 114: {fileID: 114000012750198154}
   m_Layer: 0
   m_Name: PortalPrefab
@@ -185,3 +186,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arco: {fileID: 1000010125218500}
+--- !u!114 &114000013833587386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013887002718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf30491fac1e6543a42a0f60ccf8ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMateria: {fileID: 2100000, guid: 4234233254ec047bcacb72fd994b073c, type: 2}
+  initialColor: {r: 1, g: 0.654902, b: 0.21568628, a: 1}
+  color: {r: 0, g: 0, b: 0, a: 0}

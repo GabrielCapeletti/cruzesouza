@@ -72,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012593944090}
   m_LocalRotation: {x: -0.007595915, y: 0.707066, z: 0.707066, w: 0.007595915}
-  m_LocalPosition: {x: 0, y: 57, z: 0}
+  m_LocalPosition: {x: -0, y: 1.54, z: 0}
   m_LocalScale: {x: 0.045952085, y: 0.045952085, z: 0.045952085}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 178.76901}
   m_Children: []
@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013700276600}
   m_LocalRotation: {x: -0.007825037, y: 0.7070635, z: 0.7070635, w: 0.007825037}
-  m_LocalPosition: {x: 1.0374578, y: 14.095865, z: -5.535164}
+  m_LocalPosition: {x: -31.49805, y: 78.96558, z: -38.81439}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -100,8 +100,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011087453924}
   m_LocalRotation: {x: -0.007595915, y: 0.707066, z: 0.707066, w: 0.007595915}
-  m_LocalPosition: {x: 0, y: 57, z: 0}
-  m_LocalScale: {x: 0.0459521, y: 0.045952093, z: 0.0459521}
+  m_LocalPosition: {x: -0, y: 1.54, z: 0}
+  m_LocalScale: {x: 0.038678605, y: 0.038678594, z: 0.0386786}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 178.76901}
   m_Children: []
   m_Father: {fileID: 4000011244161484}
@@ -191,7 +191,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 6
+  m_Constraints: 2
   m_CollisionDetection: 0
 --- !u!65 &65000012752085398
 BoxCollider:

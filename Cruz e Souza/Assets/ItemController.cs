@@ -6,12 +6,13 @@ public class ItemController : ObstacleController
 {
     public GameObject transparent;
     public GameObject opaco;
-    public Animator animator;
+    public Animator animator;    
     private Material materialTransparent;
 
     protected override void Start()
     {
         base.Start();
+    
         materialTransparent = this.transparent.GetComponent<MeshRenderer>().material;
     }
 

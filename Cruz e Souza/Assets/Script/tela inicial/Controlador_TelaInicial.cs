@@ -47,7 +47,7 @@ public class Controlador_TelaInicial :  MonoBehaviour, IPointerEnterHandler, IPo
 
 	public void mudaTela(){
 		if (bt == "jogar") {
-			Application.LoadLevel (3);
+			Application.LoadLevel (2);
 		}
 		if (bt == "pat") {
 			Application.LoadLevel (0);
