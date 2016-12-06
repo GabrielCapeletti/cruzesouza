@@ -7,6 +7,8 @@ namespace Core
 {
 	public class GameManager : MonoBehaviour {
 
+
+        public float timeMagicItem = 30;
         public float playerOffSet;
         public float speed;
 
@@ -68,7 +70,10 @@ namespace Core
 
         void Start()
         {
-            this.SpawnItem();            
+            this.SpawnItem();
+            this.normalMusic.time = 5;
+            this.normalMusic.Play();
+
             totalItens = new int[itensTexts.Length];
             for (int i = 0; i < totalItens.Length; i++)
             {
@@ -121,7 +126,7 @@ namespace Core
             if (!this.poemMode) {
                 GameObject.Instantiate(enemies[(int)f], this.transform.position + new Vector3(offset * playerOffSet, 0.95f, 0), Quaternion.identity);
             }
-            if (spawMagicItem <= 0 && Time.timeSinceLevelLoad > 2)
+            if (spawMagicItem <= 0 && Time.timeSinceLevelLoad > timeMagicItem)
             {
                 Invoke("SpawnMagicItem", 1);
                 spawMagicItem++;

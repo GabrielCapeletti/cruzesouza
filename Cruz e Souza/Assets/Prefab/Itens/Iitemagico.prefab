@@ -27,7 +27,7 @@ GameObject:
   - 65: {fileID: 65000010806018750}
   m_Layer: 0
   m_Name: Iitemagico
-  m_TagString: ItemMagico
+  m_TagString: Magico
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
