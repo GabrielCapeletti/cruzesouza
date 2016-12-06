@@ -6,6 +6,8 @@
     public const string GROUND = "Ground";
     public const string OBSTACLE = "Obstacle";
 
+    public const string ITEM_MAGICO = "Magico";
+
     public const string ITEM_1 = "Item1";
     public const string ITEM_2 = "Item2";
     public const string ITEM_3 = "Item3";

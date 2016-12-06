@@ -265,6 +265,12 @@ public class PlayerController : MonoBehaviour {
             Singleton<GameManager>.Instance.GotItem(index);
             KillObstacle(coll.gameObject);
         }
+
+        if (coll.collider.tag == TagMap.ITEM_MAGICO)
+        {
+            Singleton<GameManager>.Instance.ShowBlackScreen();
+            GameObject.Destroy(coll.gameObject);
+        }
         
         if (coll.collider.tag == TagMap.GROUND && this.currentState == State.JUMPING )
         {         
