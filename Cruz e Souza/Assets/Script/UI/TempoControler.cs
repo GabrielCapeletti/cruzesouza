@@ -44,8 +44,8 @@ public class TempoControler : MonoBehaviour {
 
 	public float tempoTotal;
 	float tempoPorSp;
-	float tempoAtual = 0;
-
+	public float tempoAtual = 0;
+    public bool active = false;
 	float dt_fogo;
 
 
@@ -56,11 +56,12 @@ public class TempoControler : MonoBehaviour {
 		tempoPorSp = tempoTotal / 12;
 	}
 	float velocidadeAnimFogo = 0.200f;
-	// Update is called once per frame
-	void Update () {
-		dt_fogo += Time.deltaTime;
-		tempoAtual += Time.deltaTime;
-
+    // Update is called once per frame
+    void Update() {
+        if (active) { 
+            dt_fogo += Time.deltaTime;
+        tempoAtual += Time.deltaTime;
+       }
 		int sp = (int)(tempoAtual / tempoPorSp);		
 		switch(sp){
 		case 0:

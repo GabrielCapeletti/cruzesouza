@@ -56,6 +56,11 @@ namespace Core
 			gameState = GameStateMap.RUNNING;
 		}
 
+        public void LoadScene(int fase)
+        {
+            Application.LoadLevel(fase);
+        }
+
 		public void LoadScene (string sceneName) {
 			UnityEngine.SceneManagement.SceneManager.LoadScene (sceneName);
 		}
