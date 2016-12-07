@@ -40,6 +40,8 @@ GameObject:
   - 54: {fileID: 54000014149080588}
   - 114: {fileID: 114000010918788328}
   - 65: {fileID: 65000010430939628}
+  - 114: {fileID: 114000013049954790}
+  - 114: {fileID: 114000013859321658}
   m_Layer: 0
   m_Name: MercadoPathLow
   m_TagString: Obstacle
@@ -171,3 +173,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noLenght: 0
+--- !u!114 &114000013049954790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010568661090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 260a4ba3756edf6428c577735393e1cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalGround: {fileID: 2800000, guid: 857b602fc897ca04ba67e83349e7b4e3, type: 3}
+  poemGround: {fileID: 2800000, guid: 97496ce014fb8a44abf45d53a4d2a35e, type: 3}
+  groundMaterial: {fileID: 2100000, guid: f773d2ce5bbe04c17bc751d13d43a32c, type: 2}
+--- !u!114 &114000013859321658
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010568661090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf30491fac1e6543a42a0f60ccf8ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMateria: {fileID: 2100000, guid: 4234233254ec047bcacb72fd994b073c, type: 2}
+  initialColor: {r: 1, g: 0.654902, b: 0.21568628, a: 1}
+  color: {r: 0, g: 0, b: 0, a: 0}

@@ -5,15 +5,24 @@ using UnityEngine.UI;
 
 namespace Core
 {
-
 	public class GameManager : MonoBehaviour {
 
+
+        public float timeMagicItem = 30;
         public float playerOffSet;
         public float speed;
-                
+
+        public AudioSource normalMusic;
+        public AudioSource magicMusic;
+
+        public bool poemMode = false;
+
+        public GameObject magicItem;
         public GameObject[] enemies;
         public GameObject[] itens;
-        public Text[] itensTexts;        
+        public Text[] itensTexts;
+
+        public TelaPretaController telaPreta;     
 
         [HideInInspector]
         public int[] totalItens;                
@@ -25,6 +34,8 @@ namespace Core
 		private const int MIN_TIME_CG_CALL = 30;
 
         public GameStateMap GameState { get { return gameState; } set { gameState = value; } }
+
+        private int spawMagicItem;
 
 		/**
 		 * System otimization. When the game is paused
@@ -41,9 +52,28 @@ namespace Core
 			gameState = GameStateMap.PAUSED;
 		}
 
+        public void ShowBlackScreen()
+        {
+            telaPreta.goBlack = true;
+            telaPreta.goTransparent = false;
+
+            telaPreta.gameObject.SetActive(true);
+        }
+
+        public void HideScreen()
+        {
+            telaPreta.goBlack = false;
+            telaPreta.goTransparent = true;
+            this.poemMode = !this.poemMode;
+        }
+
+
         void Start()
         {
-            this.SpawnItem();            
+            this.SpawnItem();
+            this.normalMusic.time = 5;
+            this.normalMusic.Play();
+
             totalItens = new int[itensTexts.Length];
             for (int i = 0; i < totalItens.Length; i++)
             {
@@ -85,13 +115,31 @@ namespace Core
             Invoke("SpawnEnemy", 1);
         }
 
+        void SpawnMagicItem()
+        {
+            int offset = UnityEngine.Random.Range(-1, 2);
+
+            GameObject.Instantiate(magicItem, this.transform.position + new Vector3(offset * playerOffSet, 1.35f, 0), Quaternion.identity);
+
+            Invoke("SpawnEnemy", 1);
+        }
+
         void SpawnEnemy()
         {
             int f = UnityEngine.Random.Range(0, enemies.Length);            
             int offset = UnityEngine.Random.Range(-1 , 2);
-
-            GameObject.Instantiate(enemies[(int)f], this.transform.position + new Vector3(offset*playerOffSet, 0.95f, 0), Quaternion.identity);
-            Invoke("SpawnItem", 1);
+            if (!this.poemMode) {
+                GameObject.Instantiate(enemies[(int)f], this.transform.position + new Vector3(offset * playerOffSet, 0.95f, 0), Quaternion.identity);
+            }
+            if (spawMagicItem <= 0 && Time.timeSinceLevelLoad > timeMagicItem)
+            {
+                Invoke("SpawnMagicItem", 1);
+                spawMagicItem++;
+            }
+            else
+            {
+                Invoke("SpawnItem", 1);
+            }
         }
     }
 

@@ -89,6 +89,8 @@ GameObject:
   - 54: {fileID: 54000011011608368}
   - 114: {fileID: 114000010782276980}
   - 65: {fileID: 65000013221743656}
+  - 114: {fileID: 114000013656097258}
+  - 114: {fileID: 114000013562848236}
   m_Layer: 0
   m_Name: RioPath
   m_TagString: Obstacle
@@ -116,7 +118,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013565668144}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -912.0498, y: 1571.4559, z: -6414.1}
+  m_LocalPosition: {x: 531.0073, y: 430.54468, z: -3521.199}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -313,8 +315,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20, y: 10, z: 49.5}
-  m_Center: {x: 0, y: 3, z: -0.5}
+  m_Size: {x: 20, y: 10, z: 50}
+  m_Center: {x: 0, y: 3, z: 0}
 --- !u!95 &95000012752377774
 Animator:
   serializedVersion: 3
@@ -344,3 +346,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noLenght: 0
+--- !u!114 &114000013562848236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013565668144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf30491fac1e6543a42a0f60ccf8ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMateria: {fileID: 2100000, guid: 0f1e7d8803691014fa25cc0cce113237, type: 2}
+  initialColor: {r: 1, g: 1, b: 1, a: 1}
+  color: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &114000013656097258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013565668144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 260a4ba3756edf6428c577735393e1cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalGround: {fileID: 2800000, guid: b40d8023cb0c52d43a48ee860ff76aed, type: 3}
+  poemGround: {fileID: 2800000, guid: e52ee868263ed56439cf3b6c2c416365, type: 3}
+  groundMaterial: {fileID: 2100000, guid: edff05af5a96ac64db83b2810263cf2d, type: 2}

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using Core;
 using System;
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour {
     private Renderer modelRender;
     public Animator animator;
 
+    public AudioSource plimSound;
 
     private Vector3 initialPosition;
     private int score;
@@ -288,6 +290,10 @@ public class PlayerController : MonoBehaviour {
         if (coll.collider.tag == TagMap.ENEMY)
         {
 			life--;
+            if (life < 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
             StartCoroutine(DamageAnimation());
             KillObstacle(coll.gameObject);
         }
@@ -299,6 +305,14 @@ public class PlayerController : MonoBehaviour {
             index--;
             Singleton<GameManager>.Instance.GotItem(index);
             KillObstacle(coll.gameObject);
+            plimSound.Play();
+        }
+
+        if (coll.collider.tag == TagMap.ITEM_MAGICO)
+        {
+            plimSound.Play();
+            Singleton<GameManager>.Instance.ShowBlackScreen();
+            GameObject.Destroy(coll.gameObject);
         }
         
         if (coll.collider.tag == TagMap.GROUND && this.currentState == State.JUMPING )

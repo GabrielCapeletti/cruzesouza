@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using Core;
 
 public class TempoControler : MonoBehaviour {
 
@@ -60,8 +61,12 @@ public class TempoControler : MonoBehaviour {
     void Update() {
         if (active) { 
             dt_fogo += Time.deltaTime;
-        tempoAtual += Time.deltaTime;
+            tempoAtual += Time.deltaTime;
        }
+        if (tempoAtual >= tempoTotal)
+        {
+            Singleton<GameManager>.Instance.Pause();
+        }
 		int sp = (int)(tempoAtual / tempoPorSp);		
 		switch(sp){
 		case 0:

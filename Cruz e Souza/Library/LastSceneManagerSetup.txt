@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/telaInicia.unity
+- path: Assets/Scene/Rio.unity
   isLoaded: 1
   isActive: 1
